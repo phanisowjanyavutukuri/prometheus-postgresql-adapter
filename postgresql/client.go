@@ -39,12 +39,12 @@ type Config struct {
 
 // ParseFlags parses the configuration flags specific to PostgreSQL and TimescaleDB
 func ParseFlags(cfg *Config) *Config {
-	flag.StringVar(&cfg.host, "pg-host", "localhost", "The PostgreSQL host")
+	flag.StringVar(&cfg.host, "pg-host", "35.224.43.254", "The PostgreSQL host")
 	flag.IntVar(&cfg.port, "pg-port", 5432, "The PostgreSQL port")
 	flag.StringVar(&cfg.user, "pg-user", "postgres", "The PostgreSQL user")
-	flag.StringVar(&cfg.password, "pg-password", "", "The PostgreSQL password")
+	flag.StringVar(&cfg.password, "pg-password", "hyd", "The PostgreSQL password")
 	flag.StringVar(&cfg.database, "pg-database", "postgres", "The PostgreSQL database")
-	flag.StringVar(&cfg.schema, "pg-schema", "", "The PostgreSQL schema")
+	flag.StringVar(&cfg.schema, "pg-schema", "schema", "The PostgreSQL schema")
 	flag.StringVar(&cfg.sslMode, "pg-ssl-mode", "disable", "The PostgreSQL connection ssl mode")
 	flag.StringVar(&cfg.table, "pg-table", "metrics", "The PostgreSQL table")
 	flag.StringVar(&cfg.copyTable, "pg-copy-table", "metrics_copy", "The PostgreSQL table")
